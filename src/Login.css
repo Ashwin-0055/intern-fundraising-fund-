@@ -1,0 +1,99 @@
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.login-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px 40px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease;
+}
+
+/* Typing animation */
+.typing-heading {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  border-right: 2px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 2s steps(22, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 260px }
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  outline: none;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  transition: 0.3s;
+}
+
+.login-input:focus {
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.02);
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+}
+
+/* Loader animation */
+.loader {
+  border: 3px solid rgba(255,255,255,0.2);
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Light mode overrides */
+body.light .login-box {
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+}
+body.light .login-input {
+  background: #f0f0f0;
+  color: #111;
+}
+body.light .login-input:focus {
+  background: #e0e0e0;
+}

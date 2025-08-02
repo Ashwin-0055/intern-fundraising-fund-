@@ -1,0 +1,86 @@
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  transition: all 0.3s ease-in-out;
+}
+
+.dashboard-card {
+  background-color: var(--card-bg);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
+  text-align: center;
+  color: var(--text);
+  animation: glowFadeIn 1.5s ease forwards;
+}
+
+.dashboard-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.typing-animation {
+  width: max-content;
+  margin: 0 auto;
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(30, end), blink 0.7s step-end infinite;
+}
+
+.rewards-section {
+  margin-top: 25px;
+}
+
+.rewards-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.rewards-section li {
+  margin: 10px 0;
+}
+
+.glow-box {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  animation: glow-border 2s ease-in-out infinite alternate;
+}
+
+.glow-reward {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.fade-in-glow {
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes glow-border {
+  from {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
