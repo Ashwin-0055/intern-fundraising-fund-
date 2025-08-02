@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Login from './components/Login';
-import Dashboard from './components/Dashboard';
-import Leaderboard from './components/Leaderboard';
+import Login from './Login';
+import Dashboard from './Dashboard';
+import Leaderboard from './Leaderboard';
 import './App.css';
 
 function App() {
